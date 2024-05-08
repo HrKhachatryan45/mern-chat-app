@@ -48,8 +48,8 @@ const signupUser = async (req, res) => {
       }
 
 
-      const boyProfilePic =  `https://api.multiavatar.com/male/${username}.png`
-      const girlProfilePic =  `https://api.multiavatar.com/female/${username}.png`
+      const boyProfilePic =  `https://avatar.iran.liara.run/public/boy?username=${username}`
+      const girlProfilePic =  `https://avatar.iran.liara.run/public/girl?username=${username}`
 
       const hashedPassword = await bcrypt.hash(password,10)
 
