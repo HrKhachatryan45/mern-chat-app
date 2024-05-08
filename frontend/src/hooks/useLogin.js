@@ -10,11 +10,10 @@ const useLogin = () =>{
         try{
             const success =  handleErrors(username,password)
             if (!success) return;
-            const response = await fetch(`api/auth/login`,{
+            const response = await fetch(`/api/auth/login`,{
                 method:"POST",
                 headers:{"Content-type":"application/json"},
                 body:JSON.stringify({username,password}),
-                credentials: 'include',
             });
             const json = await response.json();
 

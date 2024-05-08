@@ -40,9 +40,7 @@ const UseGetConversations = () =>{
         const getConversations = async () => {
             setLoading(true);
             try {
-                const response = await fetch(`z/api/users`,{
-                    credentials: 'include',
-                })
+                const response = await fetch(`/api/users`)
 
 
                 const json = await response.json();
@@ -54,6 +52,7 @@ const UseGetConversations = () =>{
 
             }catch (error) {
                 toast.error(error.message)
+                console.log(error,'errorMain')
             }finally {
                 setLoading(false)
             }
